@@ -1,0 +1,45 @@
+<div class=' d-flex justify-content-evenly mt-5 mb-5 bg-light align-items-center'>
+  <h1>Bienvenido {{userNombre}}</h1>
+
+  <div>
+    <img src="{{userFoto}}" alt="{{userNombre}}" width="50px">
+    <a href="/logout">Logout</a>
+  </div>
+</div>
+
+<h1>Lista de productos</h1>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Precio</th>
+        <th>Codigo</th>
+        {{!-- <th>Thumbnail</th> --}}
+        <th>Stock</th>
+        <th>Agregar</th>
+        <th>Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+          {{#if isEmpty}}
+    <tr >
+      <td>No hay productos registrados aún</td>
+    </tr>
+    {{/if}}
+      {{#each productos}}
+      <tr>
+        <td>{{nombre}}</td>
+        <td>{{descripcion}}</td>
+        <td>{{precio}}</td>
+        <td>{{codigo}}</td>
+        <td>{{stock}}</td>
+        <td><img src="{{thumbnail}}" alt="{{nombre}}" width="50px"></td>
+        <td><button>Agregar</button></td>
+        <td><button>Eliminar</button></td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

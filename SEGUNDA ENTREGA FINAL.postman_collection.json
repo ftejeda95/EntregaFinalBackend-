@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "3c864750-b4a6-46ab-8bdc-d6fe866da4c2",
+		"name": "SEGUNDA ENTREGA FINAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23415152"
+	},
+	"item": [
+		{
+			"name": "PRODUCTOS",
+			"item": [
+				{
+					"name": "CREAR PRODUCTO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "      {\r\n      \"nombre\": \"borralo\",\r\n      \"descripcion\": \"actualice\",\r\n      \"codigo\": 201,\r\n      \"thumbnail\": \"thumbnail\",\r\n      \"precio\": 100,\r\n      \"stock\": 50\r\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/productos/true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"true"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BORRAR PRODUCTO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/636306d5a10145699f9af24a/true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"636306d5a10145699f9af24a",
+								"true"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MOSTRAR PRODUCTO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/636306d5a10145699f9af24a/true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"636306d5a10145699f9af24a",
+								"true"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ACTUALIZAR PRODUCTO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "      {\r\n      \"nombre\": \"borralo\",\r\n      \"descripcion\": \"actualice\",\r\n      \"codigo\": 200,\r\n      \"thumbnail\": \"thumbnail\",\r\n      \"precio\": 100,\r\n      \"stock\": 0\r\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/productos/636306d5a10145699f9af24a/true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"636306d5a10145699f9af24a",
+								"true"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VER TODOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BORRAR TODOS",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"true"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CARRITO",
+			"item": [
+				{
+					"name": "CREAR CARRITO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "      {\r\n      \"nombre\": \"dos\",\r\n      \"descripcion\": \"actualice\",\r\n      \"código\": \"todo\",\r\n      \"thumbnail\": \"thumbnail\",\r\n      \"precio\": \"precio\",\r\n      \"stock\": \"stock\"\r\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AGREGAR PRODUCTO AL CARRITO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "      {\r\n      \"nombre\": \"borralo\",\r\n      \"descripcion\": \"actualice\",\r\n      \"código\": \"todo\",\r\n      \"thumbnail\": \"thumbnail\",\r\n      \"precio\": \"precio\",\r\n      \"stock\": \"stock\"\r\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/1/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"1",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ELIMINAR CARRITO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR PRODUCTOS DE CARRITO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/1/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"1",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
